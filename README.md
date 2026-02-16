@@ -28,7 +28,7 @@ This created slow feedback loops and prevented reliable KPI governance.
 
 ## Architecture Overview
 
-![ETL Architecture](visuals/etl-architecture-diagram.png)
+![ETL Architecture](IMG_1420.png)
 
 This diagram illustrates the flow from legacy POS export → staging → dimensional model → governed executive KPI views → BI layer.
 
