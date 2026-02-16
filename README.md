@@ -28,6 +28,13 @@ This architecture enables leadership to operate with a consistent, governed KPI 
 
 > This cadence is intentionally lightweight so it scales with minimal overhead.
 
+## Quantified Executive Impact
+
+See:
+- [Executive KPI Impact Simulation](analysis/executive_kpi_impact_simulation.md)
+
+This models how KPI governance and architectural standardization translate into measurable revenue leverage through improved executive decision velocity.
+
 ## Problem
 Legacy POS systems produced exports that were:
 - inconsistent across time/fields
