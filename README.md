@@ -26,6 +26,12 @@ This created slow feedback loops and prevented reliable KPI governance.
 3. **Govern** metrics through a documented dictionary (single definitions + owners)  
 4. **Publish** executive-ready views suitable for Tableau/Power BI
 
+## Architecture Overview
+
+![ETL Architecture](visuals/etl-architecture-diagram.png)
+
+This diagram illustrates the flow from legacy POS export → staging → dimensional model → governed executive KPI views → BI layer.
+
 ## Repository Map
 - `docs/etl-architecture.md` — pipeline design + flow
 - `docs/data-dictionary.md` — source fields → standardized definitions
