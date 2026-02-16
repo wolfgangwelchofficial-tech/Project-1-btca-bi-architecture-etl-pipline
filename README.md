@@ -55,16 +55,28 @@ This created slow feedback loops and prevented reliable KPI governance.
 
 This diagram illustrates the flow from legacy POS export → staging → dimensional model → governed executive KPI views → BI layer.
 
-## Repository Map
-- `docs/etl-architecture.md` — pipeline design + flow
-- `docs/data-dictionary.md` — source fields → standardized definitions
-- `docs/executive-source-of-truth.md` — governance model + KPI rules
-- `governance/metric_dictionary.md` — metric definitions + owners + cadence
-- `sql/00_schema.sql` — star schema tables (facts/dimensions)
-- `sql/01_views.sql` — executive reporting views (KPI-ready)
-- `data/` — synthetic legacy POS exports (demo)
-- `analysis/` — example queries + KPI derivations
-- `visuals/` — diagrams + dashboard mockups
+## Repository Structure
+
+This case study is organized into five executive-facing layers:
+
+### 1️⃣ Architecture & Data Modeling
+- [ETL Architecture Overview](docs/etl-architecture.md)  
+- [Star Schema Definition](sql/00_schema.sql)  
+- [Governed KPI Views](sql/01_views.sql)
+
+### 2️⃣ Governance Framework
+- [Executive Source of Truth Model](docs/executive-source-of-truth.md)  
+- [KPI Metric Dictionary](governance/metric_dictionary.md)
+
+### 3️⃣ Data Standardization
+- [Raw-to-Staging Field Mapping](docs/data-dictionary.md)  
+- [Synthetic POS Dataset](data/raw_pos_export.csv)
+
+### 4️⃣ Analytical Validation
+- [Sample Executive Queries](analysis/sample_queries.sql)
+
+### 5️⃣ Business Impact Modeling
+- [Executive KPI Impact Simulation](analysis/executive_kpi_impact_simulation.md)
 
 ## Data Model (Star Schema)
 This repo models reporting around:
@@ -80,12 +92,22 @@ This project emphasizes that dashboards are only as good as their definitions.
 
 See: `governance/metric_dictionary.md` and `docs/executive-source-of-truth.md`
 
-## How to Use This Repo (Browser-Friendly)
-1. Review the architecture: `docs/etl-architecture.md`
-2. Review metric governance: `governance/metric_dictionary.md`
-3. Review schema + views: `sql/00_schema.sql`, `sql/01_views.sql`
-4. Inspect synthetic exports: `data/`
-5. Reference visuals/mockups: `visuals/`
+## How to Navigate This Case Study
+
+For executive review:
+
+1. Read the Executive Summary.
+2. Review the Architecture Overview to understand data flow.
+3. Examine the Governance Framework to see how KPIs are standardized.
+4. Review the Executive KPI Impact Simulation to understand quantified business leverage.
+
+For technical review:
+
+1. Inspect the Star Schema (`sql/00_schema.sql`).
+2. Review Governed KPI Views (`sql/01_views.sql`).
+3. Validate calculations using Sample Queries (`analysis/sample_queries.sql`).
+
+This repository is structured to support both executive-level and technical evaluation.
 
 ## What I’d Improve Next
 - Automate quality checks (schema validation, null thresholds, outlier flags)
