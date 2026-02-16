@@ -12,6 +12,22 @@ The result was a repeatable pipeline and KPI governance model that reduced manua
 - Enabled real-time executive visibility through a single metric definition layer (“source of truth”)
 - Established a scalable foundation for KPI cadence, drill-downs, and operational sprints
 
+## Business Impact (How Leadership Uses This)
+
+This architecture enables leadership to operate with a consistent, governed KPI system:
+
+- **Weekly Executive Deep Dive:** Revenue trend, product mix, and transaction performance reviewed on a fixed cadence
+- **Drill-Down Clarity:** KPI views allow fast pivoting by week and category without metric redefinition
+- **Decision Velocity:** Shifts energy from “arguing about numbers” to choosing actions (pricing, promos, staffing, product mix)
+
+### Weekly Operating Cadence (Example)
+1. **Monday:** Review last week’s results (vw_weekly_revenue, vw_revenue_per_transaction)  
+2. **Tuesday:** Identify category opportunities (vw_category_product_mix)  
+3. **Wednesday:** Decide interventions (pricing/promo/menu/ops changes)  
+4. **Friday:** Validate outcomes and prepare next deep dive
+
+> This cadence is intentionally lightweight so it scales with minimal overhead.
+
 ## Problem
 Legacy POS systems produced exports that were:
 - inconsistent across time/fields
